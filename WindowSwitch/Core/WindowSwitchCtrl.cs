@@ -35,7 +35,7 @@ public class WindowSwitchCtrl : IWindowSwitchCtrl
     /// <summary>
     /// 关闭所有打开的窗口
     /// </summary>
-    public void OnCloseThisThisWindow()
+    public void OnCloseThisWindow()
     {
         CloseChildWindow();
 
@@ -95,22 +95,27 @@ public class WindowSwitchCtrl : IWindowSwitchCtrl
     /// </summary>
     /// <param name="path"></param>
     /// <param name="hideThis"></param>
-    public void OpenChildWindow(string path, bool hideThis,params string[] args)
+    public bool OpenChildWindow(string path, bool hideThis,params string[] args)
     {
         if (childProcess == null|| childProcess.HasExited)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(path);
-            startInfo.Arguments = (WindowCalc.GetCurrProcessWnd() + " " + (hideThis ? 1 : 0).ToString()).ToString();
-            for (int i = 0; i < args.Length; i++)
+            if (System.IO.File.Exists(path))
             {
-                startInfo.Arguments += " " + args[i];
-            }
-            startInfo.UseShellExecute = true;
-            startInfo.WindowStyle = ProcessWindowStyle.Normal;
-            childProcess = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo(path);
+                startInfo.Arguments = (WindowCalc.GetCurrProcessWnd() + " " + (hideThis ? 1 : 0).ToString()).ToString();
+                for (int i = 0; i < args.Length; i++)
+                {
+                    startInfo.Arguments += " " + args[i];
+                }
+                startInfo.UseShellExecute = true;
+                startInfo.WindowStyle = ProcessWindowStyle.Normal;
+                childProcess = new Process();
 
-            childProcess.StartInfo = startInfo;
-            childProcess.Start();
+                childProcess.StartInfo = startInfo;
+                childProcess.Start();
+                return true;
+            }
         }
+        return false;
     }
 }
