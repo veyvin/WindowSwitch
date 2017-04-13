@@ -1,0 +1,10 @@
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\bin\Debug\WindowSwitch.dll
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\bin\Debug\WindowSwitch.pdb
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.dll
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.pdb
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\WindowSwitch\bin\Debug\WindowSwitch.dll
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\WindowSwitch\bin\Debug\WindowSwitch.pdb
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.dll
+C:\Users\Administrator\Desktop\WindowSwitch\WindowSwitch\WindowSwitch\obj\Debug\WindowSwitch.pdb
