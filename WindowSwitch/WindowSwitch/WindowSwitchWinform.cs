@@ -53,6 +53,15 @@ namespace FormSwitch
             }
 
         }
+
+        public Process ChildProcess
+        {
+            get
+            {
+                return childProcess;
+            }
+        }
+
         private IntPtr child;
         private IntPtr current;
 
@@ -111,7 +120,7 @@ namespace FormSwitch
             if (argus.Length > 2)
             {
                 var temp = new string[argus.Length - 2];
-                for (int i = 0; i < argus.Length; i++)
+                for (int i = 0; i < temp.Length; i++)
                 {
                     temp[i] = argus[(i + 2)];
                 }

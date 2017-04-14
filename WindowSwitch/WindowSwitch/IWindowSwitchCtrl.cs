@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 namespace FormSwitch.Internal
 {
 
     public interface IWindowSwitchCtrl
     {
+        Process ChildProcess { get; }
         IntPtr Parent { get; }
         IntPtr Child { get; }
         IntPtr Current { get; }

@@ -54,6 +54,15 @@ namespace FormSwitch
             }
 
         }
+
+        public Process ChildProcess
+        {
+            get
+            {
+                return childProcess;
+            }
+        }
+
         private IntPtr child;
         private IntPtr current;
         /// <summary>
