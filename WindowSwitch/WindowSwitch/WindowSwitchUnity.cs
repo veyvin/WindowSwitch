@@ -20,7 +20,7 @@ namespace FormSwitch
                 {
                     if (loadAsChild)
                     {
-                        EnumChildWindows(holderwindow, (hwnd, lparam) => { current = hwnd; return 0; }, IntPtr.Zero);
+                        EnumChildWindows(parentWindow, (hwnd, lparam) => { current = hwnd; return 0; }, IntPtr.Zero);
                     }
                     else
                     {
@@ -55,7 +55,6 @@ namespace FormSwitch
 
         }
         private IntPtr child;
-        private IntPtr holderwindow;
         private IntPtr current;
         /// <summary>
         /// 关闭指定窗口
@@ -96,7 +95,6 @@ namespace FormSwitch
         {
             hideParent = false;
             parentWindow = IntPtr.Zero;
-            holderwindow = IntPtr.Zero;
             argus = null;
             string[] CommandLineArgs = Environment.GetCommandLineArgs();
             //默认参数
